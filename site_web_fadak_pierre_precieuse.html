@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadak Pierre Précieuse | Bijouterie & Joaillerie de Luxe à Marcory, Abidjan</title>
+    <meta name="description" content="Découvrez l'élégance sur-mesure chez Fadak Pierre Précieuse à Marcory, Abidjan. Pierres précieuses certifiées, bagues de fiançailles, colliers et création sur-mesure.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            850: '#06322b',
+                            900: '#03231e',
+                            950: '#011613'
+                        },
+                        gold: {
+                            300: '#f6e093',
+                            400: '#e6c875',
+                            500: '#d4af37',
+                            600: '#c5a059',
+                            700: '#a37e36'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #011613;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Gold Gradient Effects */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #f6e093 0%, #d4af37 50%, #a37e36 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #e6c875 0%, #d4af37 50%, #c5a059 100%);
+        }
+
+        .bg-gold-gradient-hover:hover {
+            background: linear-gradient(135deg, #f6e093 0%, #e6c875 50%, #d4af37 100%);
+        }
+
+        .border-gold-gradient {
+            border-image: linear-gradient(135deg, #d4af37, #a37e36) 1;
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(3, 35, 30, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .glass-card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card-hover:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 20px 40px -15px rgba(212, 175, 55, 0.15);
+        }
+
+        /* Custom Ambient Background Elements */
+        .radial-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.12) 0%, rgba(3, 35, 30, 0) 70%);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #011613;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a37e36;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-emerald-950 text-gold-300 text-xs py-2 border-b border-gold-500/20 text-center tracking-wider px-4">
+        <span>✨ BOUTIQUE À MARCORY, ABIDJAN — OUVERT DU LUNDI AU SAMEDI DE 9H00 À 19H00</span>
+        <span class="hidden md:inline mx-3">•</span>
+        <a href="tel:+2250748484222" class="hover:underline font-semibold text-white transition"><i class="fa-solid fa-phone mr-1"></i> +225 07 48 48 42 22</a>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-card border-x-0 border-t-0 shadow-lg transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full border border-gold-500/40 flex items-center justify-center bg-emerald-900 group-hover:border-gold-400 transition duration-300 shadow-md">
+                        <i class="fa-solid fa-gem text-gold-500 text-xl group-hover:scale-110 transition duration-300"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-white group-hover:text-gold-300 transition">FADAK</span>
+                        <span class="text-[10px] uppercase tracking-[0.25em] text-gold-500 font-medium -mt-1">Pierre Précieuse • Abidjan</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#accueil" class="text-white hover:text-gold-400 transition duration-200">Accueil</a>
+                    <a href="#collections" class="text-gray-300 hover:text-gold-400 transition duration-200">Collections</a>
+                    <a href="#sur-mesure" class="text-gray-300 hover:text-gold-400 transition duration-200">Sur-Mesure</a>
+                    <a href="#a-propos" class="text-gray-300 hover:text-gold-400 transition duration-200">À Propos</a>
+                    <a href="#contact" class="text-gray-300 hover:text-gold-400 transition duration-200">Avis & Contact</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="https://wa.me/2250748484222?text=Bonjour%20Fadak%20Pierre%20Pr%C3%A9cieuse%2C%20je%20souhaite%20me%20renseigner%20sur%20vos%20cr%C3%A9ations." target="_blank" rel="noopener noreferrer" class="bg-gold-gradient bg-gold-gradient-hover text-emerald-950 font-bold px-5 py-2.5 rounded-full text-sm transition-all shadow-md shadow-gold-500/10 flex items-center gap-2 hover:scale-105">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Contact WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-gray-300 hover:text-white p-2 rounded-lg focus:outline-none" aria-label="Menu principal">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card border-b border-gold-500/30 px-4 pt-2 pb-6 space-y-4">
+            <a href="#accueil" class="mobile-link block py-2 text-base font-medium text-gold-400 hover:text-white border-b border-white/5">Accueil</a>
+            <a href="#collections" class="mobile-link block py-2 text-base font-medium text-gray-200 hover:text-gold-400 border-b border-white/5">Collections</a>
+            <a href="#sur-mesure" class="mobile-link block py-2 text-base font-medium text-gray-200 hover:text-gold-400 border-b border-white/5">Sur-Mesure & Atelier</a>
+            <a href="#a-propos" class="mobile-link block py-2 text-base font-medium text-gray-200 hover:text-gold-400 border-b border-white/5">À Propos de la Bijouterie</a>
+            <a href="#contact" class="mobile-link block py-2 text-base font-medium text-gray-200 hover:text-gold-400 border-b border-white/5">Localisation & Avis</a>
+            <a href="https://wa.me/2250748484222?text=Bonjour%20Fadak%20Pierre%20Pr%C3%A9cieuse%2C%20je%20souhaite%20me%20renseigner%20sur%20vos%20cr%C3%A9ations." target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-gold-gradient text-emerald-950 font-bold py-3 rounded-full text-center flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Écrire sur WhatsApp (+225)</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 px-4">
+        <!-- Background Jewelry Image with Clear, Crisp Visibility -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Bijoux de luxe de fond" 
+                 class="w-full h-full object-cover filter brightness-75 contrast-110"
+                 onerror="this.style.display='none'">
+            <!-- Subtle Radial Gradient Overlay to ensure text readability without blurring the background -->
+            <div class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/50 to-emerald-950/70"></div>
+        </div>
+
+        <!-- Ambient Glowing Backgrounds -->
+        <div class="absolute inset-0 radial-glow pointer-events-none z-0"></div>
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+        <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-emerald-700/20 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+        <div class="relative max-w-5xl mx-auto text-center z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-500/30 bg-emerald-900/60 text-gold-300 text-xs sm:text-sm font-medium mb-8 backdrop-blur-md">
+                <i class="fa-solid fa-crown text-gold-500"></i>
+                <span>Haute Joaillerie & Pierres Précieuses • Marcory Zone 4 / Av. Marcory</span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+                L'Élégance Pure au Cœur d'<span class="text-gold-gradient">Abidjan</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                Spécialiste des gemmes rares, bagues d'exception et créations joaillères sur-mesure. Succombez au charme intemporel de nos diamants, émeraudes, rubis et saphires certifiés.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="#collections" class="w-full sm:w-auto px-8 py-4 bg-gold-gradient bg-gold-gradient-hover text-emerald-950 font-bold rounded-full transition-all duration-300 shadow-xl shadow-gold-500/20 hover:scale-105 flex items-center justify-center gap-3">
+                    <span>Explorer la Collection</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#sur-mesure" class="w-full sm:w-auto px-8 py-4 glass-card text-white font-medium rounded-full hover:bg-emerald-900/80 hover:border-gold-500/60 transition-all duration-300 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-wand-magic-sparkles text-gold-400"></i>
+                    <span>Créer un Bijou Sur-Mesure</span>
+                </a>
+            </div>
+
+            <!-- Google Rating Highlight Pill -->
+            <div class="mt-14 inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl glass-card text-xs sm:text-sm text-gray-300">
+                <div class="flex text-amber-400 text-sm">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="font-bold text-white">4.7 / 5</span>
+                <span class="text-gray-400">|</span>
+                <span class="text-gray-300"><i class="fa-brands fa-google text-gold-400 mr-1"></i> Évalué par nos clients à Abidjan</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="py-12 bg-emerald-900/40 border-y border-gold-500/20 backdrop-blur-sm relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Advantage 1 -->
+                <div class="flex items-center gap-4 p-4 rounded-xl glass-card">
+                    <div class="w-14 h-14 rounded-full bg-emerald-900 border border-gold-500/40 flex items-center justify-center text-gold-400 text-2xl shrink-0">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-white font-serif font-bold text-base">Pierres Certifiées</h2>
+                        <p class="text-gray-400 text-xs mt-1">Authenticité et traçabilité garanties sur toutes nos gemmes.</p>
+                    </div>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="flex items-center gap-4 p-4 rounded-xl glass-card">
+                    <div class="w-14 h-14 rounded-full bg-emerald-900 border border-gold-500/40 flex items-center justify-center text-gold-400 text-2xl shrink-0">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-white font-serif font-bold text-base">Création Sur-Mesure</h2>
+                        <p class="text-gray-400 text-xs mt-1">Conception unique selon vos croquis, envies et budget.</p>
+                    </div>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="flex items-center gap-4 p-4 rounded-xl glass-card">
+                    <div class="w-14 h-14 rounded-full bg-emerald-900 border border-gold-500/40 flex items-center justify-center text-gold-400 text-2xl shrink-0">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-white font-serif font-bold text-base">Accueil VIP à Marcory</h2>
+                        <p class="text-gray-400 text-xs mt-1">Espace sécurisé et conseils joailliers personnalisés.</p>
+                    </div>
+                </div>
+
+                <!-- Advantage 4 -->
+                <div class="flex items-center gap-4 p-4 rounded-xl glass-card">
+                    <div class="w-14 h-14 rounded-full bg-emerald-900 border border-gold-500/40 flex items-center justify-center text-gold-400 text-2xl shrink-0">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-white font-serif font-bold text-base">Expertise & Confiance</h2>
+                        <p class="text-gray-400 text-xs mt-1">Savoir-faire artisanal et réputation d'excellence à Abidjan.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Collections Gallery Section -->
+    <section id="collections" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center mb-16">
+            <span class="text-gold-500 font-medium tracking-widest text-xs uppercase">Haute Joaillerie</span>
+            <h2 class="text-3xl sm:text-5xl font-bold text-white font-serif mt-2">Nos Collections d'Exception</h2>
+            <div class="w-24 h-1 bg-gold-gradient mx-auto my-4 rounded-full"></div>
+            <p class="text-gray-300 max-w-2xl mx-auto text-sm sm:text-base">
+                Chaque création de Fadak Pierre Précieuse est façonnée pour sublimer votre éclat. Explorez nos pièces signatures ou contactez-nous pour une réservation direct.
+            </p>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mt-10" id="filter-buttons">
+                <button class="filter-btn active px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium bg-gold-gradient text-emerald-950 transition duration-300" data-filter="all">Toutes les pièces</button>
+                <button class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium glass-card text-gray-300 hover:text-white hover:border-gold-500/50 transition duration-300" data-filter="bagues">Bagues & Alliances</button>
+                <button class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium glass-card text-gray-300 hover:text-white hover:border-gold-500/50 transition duration-300" data-filter="pierres">Pierres Précieuses</button>
+                <button class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium glass-card text-gray-300 hover:text-white hover:border-gold-500/50 transition duration-300" data-filter="colliers">Colliers & Pendants</button>
+                <button class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium glass-card text-gray-300 hover:text-white hover:border-gold-500/50 transition duration-300" data-filter="parures">Parures & Bracelets</button>
+            </div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
+            
+            <!-- Item 1: Solitaire Diamant -->
+            <div class="gallery-item bagues glass-card glass-card-hover rounded-2xl overflow-hidden group">
+                <div class="relative h-72 overflow-hidden bg-emerald-950">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80" 
+                         alt="Bague Solitaire Diamant" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90 group-hover:opacity-100"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x600/03231e/d4af37?text=Solitaire+Diamant';">
+                    <span class="absolute top-4 right-4 bg-emerald-950/80 backdrop-blur-md border border-gold-500/40 text-gold-300 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Bague de Fiançailles</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-xl font-bold text-white">Solitaire Éternité Diamant</h3>
+                    <p class="text-gray-400 text-xs mt-2 leading-relaxed">Or blanc 18K serti d'un diamant d'exception taille brillant. Sertissage fait main avec finition haute précision.</p>
+                    <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
+                        <span class="text-gold-400 font-serif font-bold text-sm sm:text-base">Sur devis / Disponible</span>
+                        <a href="https://wa.me/2250748484222?text=Bonjour%20Fadak%2C%20je%20souhaite%20des%20informations%20sur%20la%20Bague%20Solitaire%20Éternité%20Diamant." target="_blank" class="text-xs bg-gold-500/10 hover:bg-gold-500 border border-gold-500/40 text-gold-300 hover:text-emerald-950 font-semibold px-4 py-2 rounded-full transition duration-300 flex items-center gap-1.5 shrink-0">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Demander</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Émeraude Fine -->
+            <div class="gallery-item pierres glass-card glass-card-hover rounded-2xl overflow-hidden group">
+                <div class="relative h-72 overflow-hidden bg-emerald-950">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80" 
+                         alt="Émeraude Naturelle" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90 group-hover:opacity-100"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x600/03231e/d4af37?text=Emeraude+Certifiee';">
+                    <span class="absolute top-4 right-4 bg-emerald-950/80 backdrop-blur-md border border-gold-500/40 text-gold-300 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Pierre Fine</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-xl font-bold text-white">Émeraude Naturelle Certifiée</h3>
+                    <p class="text-gray-400 text-xs mt-2 leading-relaxed">Pierre précieuse brute ou taillée d'un vert intense. Prête pour montage sur-mesure en bague ou pendentif.</p>
+                    <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
+                        <span class="text-gold-400 font-serif font-bold text-sm sm:text-base">Sélection Privée</span>
+                        <a href="https://wa.me/2250748484222?text=Bonjour%20Fadak%2C%20je%20souhaite%20consulter%20vos%20Émeraudes%20certifi%C3%A9es%20disponibles." target="_blank" class="text-xs bg-gold-500/10 hover:bg-gold-500 border border-gold-500/40 text-gold-300 hover:text-emerald-950 font-semibold px-4 py-2 rounded-full transition duration-300 flex items-center gap-1.5 shrink-0">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Demander</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3: Pendentif Saphir Bleu -->
+            <div class="gallery-item colliers glass-card glass-card-hover rounded-2xl overflow-hidden group">
+                <div class="relative h-72 overflow-hidden bg-emerald-950">
+                    <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80" 
+                         alt="Pendentif Saphir Bleu" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90 group-hover:opacity-100"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x600/03231e/d4af37?text=Collier+Saphir';">
+                    <span class="absolute top-4 right-4 bg-emerald-950/80 backdrop-blur-md border border-gold-500/40 text-gold-300 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Collier</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-xl font-bold text-white leading-snug mb-2">Pendentif Saphir Bleu & Diamants</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Pendentif royal orné d'un Saphir bleu nuit et entouré d'un pavage de diamants étincelants.</p>
+                    <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
+                        <span class="text-gold-400 font-serif font-bold text-sm sm:text-base">Pièce Unique</span>
+                        <a href="https://wa.me/2250748484222?text=Bonjour%20Fadak%2C%20pouvez-vous%20me%20donner%20les%20d%C3%A9tails%20du%20Pendentif%20Saphir%20Bleu%20%3F" target="_blank" class="text-xs bg-gold-500/10 hover:bg-gold-500 border border-gold-500/40 text-gold-300 hover:text-emerald-950 font-semibold px-4 py-2 rounded-full transition duration-300 flex items-center gap-1.5 shrink-0">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Demander</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4: Parure Or 18K -->
+            <div class="gallery-item parures glass-card glass-card-hover rounded-2xl overflow-hidden group">
+                <div class="relative h-72 overflow-hidden bg-emerald-950">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80" 
+                         alt="Parure Or et Pierres" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90 group-hover:opacity-100"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x600/03231e/d4af37?text=Parure+Or+18K';">
+                    <span class="absolute top-4 right-4 bg-emerald-950/80 backdrop-blur-md border border-gold-500/40 text-gold-300 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Parure</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-xl font-bold text-white leading-snug mb-2">Parure Prestige Or 18K</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Ensemble comprenant bracelet, boucle d'oreilles et collier assorti pour grands événements & cérémonies.</p>
+                    <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
+                        <span class="text-gold-400 font-serif font-bold text-sm sm:text-base">Édition Limitée</span>
+                        <a href="https://wa.me/2250748484222?text=Bonjour%20Fadak%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20vos%20parures%20en%20Or%2018K." target="_blank" class="text-xs bg-gold-500/10 hover:bg-gold-500 border border-gold-500/40 text-gold-300 hover:text-emerald-950 font-semibold px-4 py-2 rounded-full transition duration-300 flex items-center gap-1.5 shrink-0">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Demander</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5: Bague Rubis -->
+            <div class="gallery-item bagues pierres glass-card glass-card-hover rounded-2xl overflow-hidden group">
+                <div class="relative h-72 overflow-hidden bg-emerald-950">
+                    <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80" 
+                         alt="Bague Rubis" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90 group-hover:opacity-100"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x600/03231e/d4af37?text=Bague+Rubis';">
+                    <span class="absolute top-4 right-4 bg-emerald-950/80 backdrop-blur-md border border-gold-500/40 text-gold-300 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Bague Prestige</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-xl font-bold text-white leading-snug mb-2">Bague Rubis "Majesté"</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Rubis naturel couleur intense au centre entouré d'une double couronne de diamants sur monture en or jaune.</p>
+                    <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
+                        <span class="text-gold-400 font-serif font-bold text-sm sm:text-base">Sur Rendez-vous</span>
+                        <a href="https://wa.me/2250748484222?text=Bonjour%20Fadak%2C%20je%20souhaite%20prendre%20RDV%20pour%20voir%20la%20Bague%20Rubis%20Majest%C3%A9." target="_blank" class="text-xs bg-gold-500/10 hover:bg-gold-500 border border-gold-500/40 text-gold-300 hover:text-emerald-950 font-semibold px-4 py-2 rounded-full transition duration-300 flex items-center gap-1.5 shrink-0">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Demander</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6: Lots de Pierres Précieuses Brutes -->
+            <div class="gallery-item pierres glass-card glass-card-hover rounded-2xl overflow-hidden group">
+                <div class="relative h-72 overflow-hidden bg-emerald-950">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80" 
+                         alt="Lots de Pierres Précieuses Brutes" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition duration-700 opacity-90 group-hover:opacity-100"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x600/03231e/d4af37?text=Pierres+Precieuses';">
+                    <span class="absolute top-4 right-4 bg-emerald-950/80 backdrop-blur-md border border-gold-500/40 text-gold-300 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Gemmes Rares</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-xl font-bold text-white leading-snug mb-2">Lots de Pierres Précieuses Brutes</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Large sélection de topazes, tanzanites, tourmalines et diamants taillés pour collectionneurs et investisseurs.</p>
+                    <div class="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
+                        <span class="text-gold-400 font-serif font-bold text-sm sm:text-base">Catalogue Privé</span>
+                        <a href="https://wa.me/2250748484222?text=Bonjour%20Fadak%2C%20je%20souhaite%20recevoir%20votre%20catalogue%20de%20pierres%20pr%C3%A9cieuses." target="_blank" class="text-xs bg-gold-500/10 hover:bg-gold-500 border border-gold-500/40 text-gold-300 hover:text-emerald-950 font-semibold px-4 py-2 rounded-full transition duration-300 flex items-center gap-1.5 shrink-0">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Demander</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Custom Design & Atelier Section -->
+    <section id="sur-mesure" class="py-24 bg-emerald-900/30 border-y border-gold-500/20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Info Column -->
+                <div>
+                    <span class="text-gold-500 font-medium tracking-widest text-xs uppercase"><i class="fa-solid fa-gem mr-2"></i>Service d'Atelier Sur-Mesure</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2 leading-tight">
+                        Donnez Vie à la Bague ou au Bijou de vos Rêves
+                    </h2>
+                    <p class="text-gray-300 mt-6 leading-relaxed">
+                        Chez <strong class="text-gold-400">Fadak Pierre Précieuse Abidjan</strong>, nous croyons que chaque bijou doit raconter une histoire unique. Notre atelier conçoit vos bagues de mariage, pendentifs et parures sur-mesure à partir de vos idées ou modèles d'inspiration.
+                    </p>
+
+                    <ul class="mt-8 space-y-4">
+                        <li class="flex items-start gap-3 text-sm text-gray-200">
+                            <div class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+                            <span><strong>Choix de la pierre :</strong> Diamants, émeraudes, saphires ou rubis certifiés.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-gray-200">
+                            <div class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+                            <span><strong>Métal précieux :</strong> Or jaune, or blanc, or rose 18 carats ou platine.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-gray-200">
+                            <div class="w-6 h-6 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+                            <span><strong>Gravure personnalisée :</strong> Initiales, dates importantes ou symboles gravés à la main.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Interactive Quote Generator Form -->
+                <div class="glass-card p-8 rounded-3xl border border-gold-500/30 shadow-2xl relative">
+                    <h3 class="font-serif text-2xl font-bold text-white mb-2">Simulateur de Projet Sur-Mesure</h3>
+                    <p class="text-xs text-gray-400 mb-6">Sélectionnez vos critères pour obtenir une estimation instantanée par WhatsApp.</p>
+
+                    <form id="quote-form" class="space-y-4">
+                        <!-- Type of Jewelry -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gold-300 uppercase tracking-wider mb-2">Type de bijou</label>
+                            <select id="jewel-type" class="w-full bg-emerald-950 border border-gold-500/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400">
+                                <option value="Bague de Fiançailles / Solitaire">Bague de Fiançailles / Solitaire</option>
+                                <option value="Alliance de Mariage">Alliance de Mariage</option>
+                                <option value="Collier / Pendentif Sur-Mesure">Collier / Pendentif Sur-Mesure</option>
+                                <option value="Bracelet ou Gourmette">Bracelet ou Gourmette</option>
+                                <option value="Achat de Pierre Précieuse Seule">Achat de Pierre Précieuse Seule</option>
+                            </select>
+                        </div>
+
+                        <!-- Preferred Metal -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gold-300 uppercase tracking-wider mb-2">Choix du Métal</label>
+                            <select id="metal-type" class="w-full bg-emerald-950 border border-gold-500/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400">
+                                <option value="Or Jaune 18K">Or Jaune 18 Carats</option>
+                                <option value="Or Blanc 18K">Or Blanc 18 Carats</option>
+                                <option value="Or Rose 18K">Or Rose 18 Carats</option>
+                                <option value="Platine">Platine Haute Densité</option>
+                            </select>
+                        </div>
+
+                        <!-- Main Gemstone -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gold-300 uppercase tracking-wider mb-2">Pierre Principale</label>
+                            <select id="gem-type" class="w-full bg-emerald-950 border border-gold-500/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400">
+                                <option value="Diamant Naturel">Diamant Naturel Certifié</option>
+                                <option value="Émeraude Verte">Émeraude Verte</option>
+                                <option value="Saphir Bleu">Saphir Bleu</option>
+                                <option value="Rubis Rouge">Rubis Rouge</option>
+                                <option value="Autre Pierre Fine">Autre Pierre Fine Sur-Mesure</option>
+                            </select>
+                        </div>
+
+                        <!-- Notes / Description -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gold-300 uppercase tracking-wider mb-2">Détails ou taille souhaitée</label>
+                            <textarea id="jewel-notes" rows="3" placeholder="Ex: Taille de doigt, budget estimé, date souhaitée..." class="w-full bg-emerald-950 border border-gold-500/30 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400 placeholder:text-gray-500"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="button" id="send-quote-btn" class="w-full bg-gold-gradient bg-gold-gradient-hover text-emerald-950 font-bold py-4 rounded-xl text-sm transition-all shadow-lg flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Envoyer la demande sur WhatsApp</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="a-propos" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="relative">
+                <div class="aspect-square rounded-3xl overflow-hidden glass-card p-2 border border-gold-500/30 relative z-10">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=80" 
+                         alt="Intérieur Bijouterie Fadak" 
+                         class="w-full h-full object-cover rounded-2xl"
+                         onerror="this.src='https://placehold.co/800x800/03231e/d4af37?text=Fadak+Pierre+Precieuse'">
+                </div>
+                <!-- Floating Card -->
+                <div class="absolute -bottom-6 -right-6 glass-card p-6 rounded-2xl border border-gold-500/40 z-20 hidden sm:block max-w-xs shadow-2xl">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-gold-500 text-emerald-950 flex items-center justify-center font-bold text-xl">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-300">Enseigne de Prestige</p>
+                            <p class="text-sm font-serif font-bold text-white">Avenue de Marcory, Abidjan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <span class="text-gold-500 font-medium tracking-widest text-xs uppercase">Notre Maison</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2 mb-6">
+                    Maison Fadak : La Passion des Gemmes d'Exception
+                </h2>
+                <p class="text-gray-300 leading-relaxed mb-6 font-light">
+                    Ancrée au cœur de la prestigieuse commune de Marcory à Abidjan, la maison <strong class="text-white">Fadak Pierre Précieuse</strong> est une référence pour les amateurs de haute joaillerie, collectionneurs de pierres d'exception et futurs mariés.
+                </p>
+                <p class="text-gray-300 leading-relaxed mb-8 font-light">
+                    Notre engagement repose sur une sélection rigoureuse de gemmes naturelles et un service personnalisé garantissant une discrétion absolue et un accompagnement VIP lors de chaque acquisition.
+                </p>
+
+                <div class="grid grid-cols-2 gap-6 border-t border-white/10 pt-6">
+                    <div>
+                        <span class="block font-serif text-3xl font-bold text-gold-400">100%</span>
+                        <span class="text-xs text-gray-400 mt-1 block">Pierres Authentiques Certifiées</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif text-3xl font-bold text-gold-400">4.7 / 5</span>
+                        <span class="text-xs text-gray-400 mt-1 block">Avis Clients Google Vérifiés</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-20 bg-emerald-900/30 border-t border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gold-500/10 text-gold-400 text-xs font-semibold mb-3">
+                    <i class="fa-brands fa-google"></i> AVIS CLIENTS GOOGLE
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Ce que disent nos clients</h2>
+                <div class="w-20 h-1 bg-gold-gradient mx-auto my-4 rounded-full"></div>
+            </div>
+
+            <!-- Review Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="glass-card p-6 rounded-2xl border border-gold-500/20 relative">
+                    <div class="flex items-center gap-1 text-gold-400 text-xs mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-xs sm:text-sm italic leading-relaxed">
+                        "J'ai fait confectionner mon alliance de mariage chez Fadak Pierre Précieuse à Marcory. Le résultat a dépassé mes attentes ! Le diamant est d'une pureté incroyable et le service est extrêmement professionnel."
+                    </p>
+                    <div class="mt-6 flex items-center gap-3 border-t border-white/10 pt-4">
+                        <div class="w-9 h-9 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center font-bold text-xs">K.B</div>
+                        <div>
+                            <p class="text-xs font-bold text-white">Kouassi B.</p>
+                            <p class="text-[10px] text-gray-400">Avis Google • Abidjan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-card p-6 rounded-2xl border border-gold-500/20 relative">
+                    <div class="flex items-center gap-1 text-gold-400 text-xs mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-xs sm:text-sm italic leading-relaxed">
+                        "Très belle expérience. Des pierres naturelles magnifiques et d'une grande rareté. L'accueil en boutique sur l'avenue de Marcory est très chaleureux. Je recommande vivement pour tout achat de bijoux de valeur."
+                    </p>
+                    <div class="mt-6 flex items-center gap-3 border-t border-white/10 pt-4">
+                        <div class="w-9 h-9 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center font-bold text-xs">A.M</div>
+                        <div>
+                            <p class="text-xs font-bold text-white">Aïcha M.</p>
+                            <p class="text-[10px] text-gray-400">Avis Google • Abidjan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass-card p-6 rounded-2xl border border-gold-500/20 relative">
+                    <div class="flex items-center gap-1 text-gold-400 text-xs mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-xs sm:text-sm italic leading-relaxed">
+                        "Une adresse incontournable pour la haute joaillerie à Abidjan. Conseils avisés, création sur-mesure rapide et accompagnement via WhatsApp irréprochable. Merci à toute l'équipe."
+                    </p>
+                    <div class="mt-6 flex items-center gap-3 border-t border-white/10 pt-4">
+                        <div class="w-9 h-9 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center font-bold text-xs">J.D</div>
+                        <div>
+                            <p class="text-xs font-bold text-white">Jean-Marc D.</p>
+                            <p class="text-[10px] text-gray-400">Avis Google • Abidjan</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="text-gold-500 font-medium tracking-widest text-xs uppercase">Rendez-nous Visite</span>
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2">Boutique & Coordonnées</h2>
+            <div class="w-20 h-1 bg-gold-gradient mx-auto my-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Information Box -->
+            <div class="glass-card p-8 rounded-3xl border border-gold-500/30 flex flex-col justify-between space-y-8">
+                <div>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-6">Fadak Pierre Précieuse</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-emerald-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-gold-300 uppercase">Adresse</h4>
+                                <p class="text-sm text-gray-200 mt-1">Av. de Marcory, Abidjan, Côte d'Ivoire</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-emerald-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-gold-300 uppercase">Téléphone & WhatsApp</h4>
+                                <a href="tel:+2250748484222" class="text-sm text-gray-200 hover:text-gold-400 block mt-1 transition">+225 07 48 48 42 22</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-emerald-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-gold-300 uppercase">Horaires d'ouverture</h4>
+                                <p class="text-sm text-gray-200 mt-1">Lundi – Samedi : 09h00 – 19h00</p>
+                                <p class="text-xs text-gray-400">Dimanche : Fermé</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/2250748484222?text=Bonjour%20Fadak%2C%20je%20souhaite%20prendre%20un%20rendez-vous%20en%20boutique." target="_blank" class="w-full bg-gold-gradient text-emerald-950 font-bold py-3.5 rounded-xl text-center flex items-center justify-center gap-2 hover:opacity-90 transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Prendre un RDV en Boutique</span>
+                </a>
+            </div>
+
+            <!-- Simulated Google Map Component -->
+            <div class="lg:col-span-2 glass-card rounded-3xl overflow-hidden border border-gold-500/30 relative min-h-[380px] flex flex-col">
+                <div class="bg-emerald-950 p-4 border-b border-gold-500/20 flex items-center justify-between text-xs text-gray-300">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-map-pin text-gold-400"></i> Localisation Google Maps</span>
+                    <a href="https://www.google.com/maps/place/Fadak+Pierre+Precieuse+Abidjan/@5.3085218,-3.9901335,15z" target="_blank" class="text-gold-400 hover:underline">Ouvrir dans Google Maps ↗</a>
+                </div>
+                
+                <!-- Embedded Map Frame -->
+                <div class="relative w-full h-full flex-1 min-h-[320px]">
+                    <iframe 
+                        title="Google Maps Location Fadak Pierre Precieuse"
+                        src="https://maps.google.com/maps?q=5.3085218,-3.9901335&z=15&output=embed" 
+                        class="w-full h-full border-0 filter grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-500" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-950 border-t border-gold-500/20 py-12 text-gray-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full border border-gold-500/40 flex items-center justify-center bg-emerald-900 text-gold-400">
+                    <i class="fa-solid fa-gem text-sm"></i>
+                </div>
+                <span class="font-serif text-lg font-bold text-white tracking-wider">FADAK PIERRE PRÉCIEUSE</span>
+            </div>
+
+            <p class="text-center md:text-left text-gray-400">
+                &copy; <span id="year">2026</span> Fadak Pierre Précieuse Abidjan. Tous droits réservés. Marcory, Côte d'Ivoire.
+            </p>
+
+            <div class="flex items-center space-x-4 text-base text-gold-400">
+                <a href="https://wa.me/2250748484222" target="_blank" aria-label="WhatsApp" class="hover:text-gold-300 transition"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#contact" aria-label="Location" class="hover:text-gold-300 transition"><i class="fa-solid fa-location-dot"></i></a>
+                <a href="tel:+2250748484222" aria-label="Phone" class="hover:text-gold-300 transition"><i class="fa-solid fa-phone"></i></a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2250748484222?text=Bonjour%20Fadak%20Pierre%20Pr%C3%A9cieuse%2C%20je%20souhaite%20des%20renseignements." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform duration-300 border-2 border-white/20"
+       aria-label="Discuter sur WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Collection Category Filtering Logic
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all
+                    filterButtons.forEach(b => {
+                        b.classList.remove('active', 'bg-gold-gradient', 'text-emerald-950');
+                        b.classList.add('glass-card', 'text-gray-300');
+                    });
+
+                    // Add active class to clicked
+                    btn.classList.add('active', 'bg-gold-gradient', 'text-emerald-950');
+                    btn.classList.remove('glass-card', 'text-gray-300');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                            item.style.display = 'block';
+                            item.style.opacity = '0';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                            }, 50);
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // WhatsApp Custom Quote Builder Logic
+            const sendQuoteBtn = document.getElementById('send-quote-btn');
+            if (sendQuoteBtn) {
+                sendQuoteBtn.addEventListener('click', () => {
+                    const jewelType = document.getElementById('jewel-type').value;
+                    const metalType = document.getElementById('metal-type').value;
+                    const gemType = document.getElementById('gem-type').value;
+                    const notes = document.getElementById('jewel-notes').value;
+
+                    let message = `Bonjour Fadak Pierre Précieuse Abidjan,%0A%0AJe souhaite faire une demande de projet sur-mesure :%0A- Type : ${encodeURIComponent(jewelType)}%0A- Métal : ${encodeURIComponent(metalType)}%0A- Pierre : ${encodeURIComponent(gemType)}`;
+                    
+                    if (notes.trim() !== '') {
+                        message += `%0A- Précisions : ${encodeURIComponent(notes)}`;
+                    }
+
+                    const whatsappUrl = `https://wa.me/2250748484222?text=${message}`;
+                    window.open(whatsappUrl, '_blank');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
